@@ -1,0 +1,10 @@
+<script lang="ts">
+	let className = $state('');
+	export { className as class };
+
+	let { children } = $props();
+</script>
+
+<h2 class={`text-2xl font-bold mb-4 ${className}`}>
+	{@render children()}
+</h2>
