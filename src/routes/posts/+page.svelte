@@ -4,6 +4,10 @@
 	let posts = getPosts();
 </script>
 
+<svelte:head>
+	<title>On My Mind</title>
+</svelte:head>
+
 <h1 class="pb-4 text-4xl">On my mind</h1>
 <div class="flex flex-col md:flex-row">
 	<div class="flex-1 pb-8 md:pb-0 md:pr-16">

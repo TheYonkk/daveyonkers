@@ -13,9 +13,6 @@ const config = {
 
 	kit: {
 		adapter: adapter()
-		// paths: {
-		// 	base: 'https://daveyonkers.com'
-		// }
 	}
 };
 

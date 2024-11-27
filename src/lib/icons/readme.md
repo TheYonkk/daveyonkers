@@ -1,0 +1,1 @@
+Icon SVGs copied and pasted from https://iconify.design

@@ -26,7 +26,7 @@
 		</div>
 	</nav>
 
-	<div class="mt-24">
+	<div class="mt-8 sm:mt-24">
 		{@render children()}
 	</div>
 </div>
