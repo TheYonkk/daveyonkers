@@ -27,7 +27,7 @@
 			<img
 				src={image}
 				alt="Dave Yonkers"
-				class="h-48 w-48 rounded-full object-cover"
+				class="bg- h-48 w-48 rounded-full bg-primary-foreground object-cover"
 				loading="lazy"
 			/>
 		</div>
