@@ -13,7 +13,7 @@
 	<div class="flex-1 pb-8 md:pb-0 md:pr-16">
 		<p class="">I missed the blogging craze.</p>
 		<p class="pt-4">
-			But, I've aquired <a class="link" href="https://daveyonkers.com">daveyonkers.com</a>, so I
+			But, I've acquired <a class="link" href="https://daveyonkers.com">daveyonkers.com</a>, so I
 			might as well use it.
 		</p>
 		<p class="pt-4">

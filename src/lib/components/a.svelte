@@ -5,6 +5,6 @@
 	let { children, href } = $props();
 </script>
 
-<a class={`underline ${className}`} {href}>
+<a class={`link ${className}`} {href}>
 	{@render children()}
 </a>

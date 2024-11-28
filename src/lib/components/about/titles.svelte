@@ -8,7 +8,7 @@
 
 	let timeout = setInterval(() => {
 		current_title = titles[(titles.indexOf(current_title) + 1) % titles.length];
-	}, 30_000);
+	}, 20_000);
 
 	onDestroy(() => {
 		clearTimeout(timeout);

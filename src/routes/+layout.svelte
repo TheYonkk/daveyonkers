@@ -7,7 +7,7 @@
 </script>
 
 <ModeWatcher defaultMode="light" />
-<div class="mx-auto w-full max-w-screen-lg px-6">
+<div class="mx-auto flex min-h-screen w-full max-w-screen-lg flex-1 flex-col px-6">
 	<nav class="flex flex-wrap justify-between py-4">
 		<div class="flex flex-col justify-center">
 			<span class="text-xl font-semibold"><a href="/">Dave Yonkers</a></span>
@@ -26,7 +26,7 @@
 		</div>
 	</nav>
 
-	<div class="mt-8 sm:mt-24">
+	<div class="mt-8 flex flex-1 flex-grow flex-col sm:mt-24">
 		{@render children()}
 	</div>
 </div>
