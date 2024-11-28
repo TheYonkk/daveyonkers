@@ -5,6 +5,6 @@
 	let { children } = $props();
 </script>
 
-<p class={`mb-2 ${className}`}>
+<p class={`mb-2 last:mb-6 ${className}`}>
 	{@render children()}
 </p>

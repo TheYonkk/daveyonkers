@@ -5,6 +5,6 @@
 	let { children } = $props();
 </script>
 
-<h2 class={`mb-4 mt-8 text-3xl font-bold ${className}`}>
+<h2 class={`mb-4 text-3xl font-bold ${className}`}>
 	{@render children()}
 </h2>
