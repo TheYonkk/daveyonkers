@@ -27,6 +27,6 @@
 	</nav>
 
 	<div class="mt-8 flex flex-1 flex-grow flex-col sm:mt-24">
-		{@render children()}
+		{@render children?.()}
 	</div>
 </div>

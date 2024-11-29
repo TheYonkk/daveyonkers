@@ -18,32 +18,34 @@
 	<article>
 		<h1 class="text-4xl font-bold">{title}</h1>
 
-		<Tooltip.Root>
-			<Tooltip.Trigger disabled={!edited}>
-				<div class="flex flex-row align-middle">
-					<p class="text-sm text-muted-foreground">
-						{originalDate.toLocaleDateString('en-US', {
-							month: 'long',
-							day: 'numeric',
-							year: 'numeric'
-						})}
-					</p>
+		<Tooltip.Provider>
+			<Tooltip.Root>
+				<Tooltip.Trigger disabled={!edited}>
+					<div class="flex flex-row align-middle">
+						<p class="text-sm text-muted-foreground">
+							{originalDate.toLocaleDateString('en-US', {
+								month: 'long',
+								day: 'numeric',
+								year: 'numeric'
+							})}
+						</p>
 
-					{#if edited}
-						<div class="ml-1 flex flex-col justify-center">
-							<Pencil class="h-3 w-3 text-muted-foreground" />
-						</div>
-					{/if}
-				</div>
-			</Tooltip.Trigger>
-			<Tooltip.Content
-				>Last edited on {editedDate.toLocaleDateString('en-US', {
-					month: 'long',
-					day: 'numeric',
-					year: 'numeric'
-				})}</Tooltip.Content
-			>
-		</Tooltip.Root>
+						{#if edited}
+							<div class="ml-1 flex flex-col justify-center">
+								<Pencil class="h-3 w-3 text-muted-foreground" />
+							</div>
+						{/if}
+					</div>
+				</Tooltip.Trigger>
+				<Tooltip.Content
+					>Last edited on {editedDate.toLocaleDateString('en-US', {
+						month: 'long',
+						day: 'numeric',
+						year: 'numeric'
+					})}</Tooltip.Content
+				>
+			</Tooltip.Root>
+		</Tooltip.Provider>
 		<div class="prose py-12">{@render children()}</div>
 	</article>
 
