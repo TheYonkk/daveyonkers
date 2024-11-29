@@ -1,6 +1,6 @@
 <script lang="ts" module>
 	import { ArrowLeft } from 'lucide-svelte';
-	import { h1, h2, h3, h4, a, p } from '$lib/components/components';
+	import { h1, h2, h3, h4, a, p } from '$lib/components/posts/components';
 	export { h1, h2, h3, h4, a, p };
 </script>
 
