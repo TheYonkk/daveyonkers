@@ -1,0 +1,31 @@
+---
+title: Basic ass Chili
+date: '2024-11-27'
+# edited: '2024-11-27'
+published: true
+layout: recipe
+---
+
+<section>  <!-- remark sectionize won't pick up this first section bc the title is in the template -->
+Injuries heal with time. That's how I like to view this chili. It ain't that special unless you cook it for a long ass time; that's what what brings this recipe together.
+
+You can expect to keep this in the crock pot or stove for at least eight hours before I'd say that it's ready to eat.
+</section>
+
+## Ingredients
+
+* beans
+* tomatoes
+* beef
+
+## Instructions
+
+_"You can can just do things."_
+
+This has been stuck in my head, and I believe it to be true. I love cooking, writing, photography, and building things! As my lifestyle outside of work has shifted to nearly all consumption-based activities, I am realizing that I need to spend more time producing the things I love, but have fallen out of practice. The last time I wrote anything of substance was likely three years ago and a school assignment, and I miss it! I want to build things and contribute to the world! Purchasing [daveyonkers.com](https://daveyonkers.com) and building this website now means that I have no excuses not to write an essay whenever I feel like it. My cold start problem for writing has been solved! Or, at least the cold start problem has been somewhat mitigated.
+
+I've always been entrepreneurial but have never formally started a business or even a side hustle. From selling jawbreakers for 25¢ to my first grade classmates, to 
+
+## My Goals
+
+I guess I don't really have any goals - I just want a space where I can throw things  ad-hoc.

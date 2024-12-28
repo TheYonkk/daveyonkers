@@ -93,8 +93,7 @@
 		<p class="prose mt-4">
 			I'm not a web developer, nor do I really want to be (I find the most enjoyment when software
 			interacts with and manipulates the physical world around us). However, I might build a thing
-			or two and link it to this site. In the meantime, I enjoy writing, and you can find some of my
-			thoughts over in <a class="link" href="/posts">posts</a>.
+			or two and link it to this site.
 		</p>
 	</div>
 </div>

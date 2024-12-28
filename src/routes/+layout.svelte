@@ -17,9 +17,12 @@
 			<div class="flex flex-col justify-center">
 				<a class="ml-4" href="/about">About</a>
 			</div>
+			<!-- <div class="flex flex-col justify-center">
+				<a class="ml-4" href="/recipes">Recipes</a>
+			</div>
 			<div class="flex flex-col justify-center">
 				<a class="ml-4" href="/posts">Posts</a>
-			</div>
+			</div> -->
 			<div class="ml-4 flex">
 				<LightDarkToggle />
 			</div>

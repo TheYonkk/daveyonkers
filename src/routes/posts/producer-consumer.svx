@@ -1,11 +1,35 @@
 ---
 title: Producer and Consumer
-date: '2024-11-26'
-#edited: '2024-11-27'
+date: '2024-11-27'
+# edited: '2024-11-27'
 published: true
 layout: blog
 ---
 
-## I will write this
+<section>  <!-- remark sectionize won't pick up this first section bc the title is in the template -->
+This is not a software engineering post (or, at least, most of it isn't). Though the producer/consumer pattern is the earliest thing that I can remember from my operating systems class, I often find myself thinking about how this pattern is applied to my day-to-day life. The producer/consumer pattern in software is where two distinct tasks, production and consumption, share a single resource (typically a queue in the middle). The producer creates some item, puts the item into the queue, and the consumer pops the item from the queue to use it. In life, the same pattern can be applied to most things.
 
-But for now, this is just some scaffolding
+  Cooking? Make the food, put it on a plate, eat the food.
+
+  Social media? User A writes a post, the post enters a database, User B reads the post.
+
+All of these examples require balance. If nobody cooks the food, you can't eat. If nobody posts on social media, you'd scroll an empty page. I've recently been thinking about this balance in my own life. Lately, I've assumed a primary role as consumer. From waking up and immediately spending 30 minutes scrolling through social media, to coming home from work and watching TV until I fall asleep. This changes today.
+</section>
+
+## Consume Less
+
+I have a habit of pulling out my phone to scroll social media whenever I'm not sure what do to with myself. I don't think it's a great habit, and I think there's a decent chance that you may have this habit, too. Social media is great! I love seeing what my old friends are up to on Instagram and catching up with news on X. However, these apps don't enforce a clear stopping condition where the marginal cost of reading a post (your time) exceeds the marginal benefit (_whatever that may be_). It's easy to scroll and swipe until I think _"this isn't a good use of my time, I need to stop."_
+
+Or, maybe your over-consumption is TV. I don't even like football that much, but I always watch college football on Saturday and the NFL on Sunday. Why? The games are entertaining, but do I need to watch the Buccaneers play the Falcons this year? Those aren't my teams! (Go Lions!) That time could probably be spent better elsewhere, _making something._
+
+## Produce More
+
+_"You can can just do things."_
+
+This has been stuck in my head, and I believe it to be true. I love cooking, writing, photography, and building things! As my lifestyle outside of work has shifted to nearly all consumption-based activities, I am realizing that I need to spend more time producing the things I love, but have fallen out of practice. The last time I wrote anything of substance was likely three years ago and a school assignment, and I miss it! I want to build things and contribute to the world! Purchasing [daveyonkers.com](https://daveyonkers.com) and building this website now means that I have no excuses not to write an essay whenever I feel like it. My cold start problem for writing has been solved! Or, at least the cold start problem has been somewhat mitigated.
+
+I've always been entrepreneurial but have never formally started a business or even a side hustle. From selling jawbreakers for 25¢ to my first grade classmates, to 
+
+## My Goals
+
+I guess I don't really have any goals - I just want a space where I can throw things  ad-hoc.

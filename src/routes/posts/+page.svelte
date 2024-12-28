@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getPosts } from '$lib/posts';
 	import Mailchimp from '$lib/components/posts/mailchimp.svelte';
-	let posts = getPosts();
+	let posts = getPosts("posts");
 </script>
 
 <svelte:head>

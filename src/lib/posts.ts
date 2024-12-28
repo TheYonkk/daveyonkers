@@ -10,13 +10,20 @@ interface PostFile {
   default: any;
 }
 
-export function getPosts() {
+export function getPosts(directory: string) {
 
-  let posts: Post[] = [];
+  let files = import.meta.glob<PostFile>("../routes/**/*.svx", { eager: true });
 
-  let files = import.meta.glob<PostFile>('../routes/posts/**/*.svx', { eager: true });
+  let posts_by_directory = new Map<String, Post[]>();
 
   for (const [path, post] of Object.entries(files)) {
+
+    let directory = path.match(/\/routes\/(.*)\//)?.[1];
+
+    if (!directory){
+      continue;
+    }
+    
     if (!post.metadata.date) continue;
     if (!post.metadata.title) continue;
 
@@ -30,15 +37,18 @@ export function getPosts() {
       console.error(`No slug found for ${path}`);
       continue;
     }
-    
-    posts.push({
+
+    const p = {
       title: post.metadata.title,
       slug,
       date: new Date(post.metadata.date),
       published: post.metadata.published ?? false,
-    });
+    };
+    posts_by_directory.set(directory, (posts_by_directory.get(directory) || []).concat(p));
 
   }
+
+  let posts = posts_by_directory.get(directory) ?? [];
 
   posts.sort((a, b) => b.date.getTime() - a.date.getTime());
 
