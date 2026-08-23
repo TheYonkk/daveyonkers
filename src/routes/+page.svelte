@@ -1,6 +1,25 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	// import RiLinkedinFill from '$lib/icons/RiLinkedinFill.svelte';
 	import RiTwitterXFill from '$lib/icons/RiTwitterXFill.svelte';
+
+	let video: HTMLVideoElement;
+
+	onMount(() => {
+		const startPlayback = () => {
+			video.defaultMuted = true;
+			video.muted = true;
+			void video.play().catch(() => undefined);
+		};
+
+		// Preserve the HTML muted attribute that Safari uses to authorize autoplay.
+		video.setAttribute('muted', '');
+		startPlayback();
+		video.addEventListener('canplay', startPlayback);
+
+		return () => video.removeEventListener('canplay', startPlayback);
+	});
 </script>
 
 <svelte:head>
@@ -11,7 +30,16 @@
 
 <main>
 	<section class="hero" aria-label="Dave Yonkers">
-		<video autoplay loop muted playsinline preload="auto" aria-hidden="true">
+		<video
+			bind:this={video}
+			autoplay
+			loop
+			muted
+			playsinline
+			preload="auto"
+			poster="/video/landing-poster.jpg"
+			aria-hidden="true"
+		>
 			<source media="(max-width: 767px)" src="/video/landing-mobile.webm" type="video/webm" />
 			<source media="(max-width: 767px)" src="/video/landing-mobile.mp4" type="video/mp4" />
 			<source media="(min-width: 768px)" src="/video/landing.webm" type="video/webm" />
