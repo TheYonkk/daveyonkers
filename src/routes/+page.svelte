@@ -5,20 +5,46 @@
 	import RiTwitterXFill from '$lib/icons/RiTwitterXFill.svelte';
 
 	let video: HTMLVideoElement;
+	let introduction: HTMLElement;
 
 	onMount(() => {
+		let hasScrolled = window.scrollY > 0;
+
 		const startPlayback = () => {
 			video.defaultMuted = true;
 			video.muted = true;
 			void video.play().catch(() => undefined);
 		};
 
+		const recordScroll = () => {
+			if (window.scrollY > 0) hasScrolled = true;
+		};
+
+		const continueAfterFirstPlay = () => {
+			// The first pass has to finish once so we can decide whether to advance the page.
+			// From here on, retain the looping background in either path.
+			video.loop = true;
+			video.currentTime = 0;
+			startPlayback();
+
+			if (!hasScrolled) {
+				const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				introduction.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+			}
+		};
+
 		// Preserve the HTML muted attribute that Safari uses to authorize autoplay.
 		video.setAttribute('muted', '');
 		startPlayback();
 		video.addEventListener('canplay', startPlayback);
+		video.addEventListener('ended', continueAfterFirstPlay);
+		window.addEventListener('scroll', recordScroll, { passive: true });
 
-		return () => video.removeEventListener('canplay', startPlayback);
+		return () => {
+			video.removeEventListener('canplay', startPlayback);
+			video.removeEventListener('ended', continueAfterFirstPlay);
+			window.removeEventListener('scroll', recordScroll);
+		};
 	});
 </script>
 
@@ -33,7 +59,6 @@
 		<video
 			bind:this={video}
 			autoplay
-			loop
 			muted
 			playsinline
 			preload="auto"
@@ -47,7 +72,7 @@
 		</video>
 	</section>
 
-	<section class="introduction">
+	<section bind:this={introduction} class="introduction">
 		<div class="introduction__content">
 			<h1>Hi, I'm Dave.</h1>
 			<p>I'm a Midwesterner in Palo Alto, California, and I'm working on some cool things.</p>
